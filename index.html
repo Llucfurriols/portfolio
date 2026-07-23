@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lluc Furriols — I build AI products</title>
+  <meta name="description" content="AI engineer from Barcelona (UPC '26). Co-founder of Muvyt. A shelf of real products: a revenue-generating AI SaaS, an App Store game, production ML, hackathon builds.">
+  <meta property="og:title" content="Lluc Furriols — I build AI products">
+  <meta property="og:description" content="A shelf of real products: an AI SaaS with paying customers, an App Store game, production ML at Shalion, hackathon builds.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-pill">
+    <a class="nav-logo" href="index.html"><img src="assets/img/lluc.jpg" alt="">Lluc</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#products">Products</a></li>
+        <li><a href="university.html">University</a></li>
+        <li class="hide-sm"><a href="#experience">Experience</a></li>
+        <li><a class="cta" href="mailto:llucfurriols@gmail.com">Say hi</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <span class="hero-hello reveal"><img src="assets/img/lluc.jpg" alt="Lluc Furriols">Hola — I'm Lluc, from Barcelona</span>
+      <h1 class="reveal">I build <span class="hl"><span>AI products</span></span>.<br>For work, and for fun.</h1>
+      <p class="hero-sub reveal">AI engineering degree by day, shipping by night: <b>a SaaS with paying customers</b>, <b>a game on the App Store</b>, <b>ML in production</b> — and whatever a hackathon weekend allows. This site is the shelf where it all lives.</p>
+      <div class="hero-ctas reveal">
+        <a class="btn btn-primary" href="#products">Browse the shelf <span class="arr">↓</span></a>
+        <a class="btn btn-ghost" href="mailto:llucfurriols@gmail.com">llucfurriols@gmail.com</a>
+      </div>
+
+      <div class="dock reveal" aria-label="Shortcuts to the products">
+        <a class="dock-item" href="projects/muvyt.html" style="--tint: var(--c-muvyt); --dock-rot: -6deg; --bob-delay: 0s">
+          <img src="assets/img/muvyt/logo.png" alt=""><span class="tip">Muvyt — AI video studio</span>
+        </a>
+        <a class="dock-item" href="projects/camellos.html" style="--tint: var(--c-camellos); --dock-rot: 4deg; --bob-delay: .6s">
+          <img src="assets/img/camellos/icon.png" alt=""><span class="tip">Camellos — App Store game</span>
+        </a>
+        <a class="dock-item" href="projects/stailist.html" style="--tint: var(--c-stailist); --dock-rot: -3deg; --bob-delay: 1.2s">
+          <span class="glyph" aria-hidden="true">🪞</span><span class="tip">StAIlist — AI wardrobe</span>
+        </a>
+        <a class="dock-item" href="projects/lead-scoring.html" style="--tint: var(--c-datathon); --dock-rot: 5deg; --bob-delay: 1.8s">
+          <span class="glyph" aria-hidden="true">📊</span><span class="tip">PPDLS — explainable scoring</span>
+        </a>
+        <a class="dock-item" href="projects/warehouse-voice.html" style="--tint: var(--c-voice); --dock-rot: -5deg; --bob-delay: 2.4s">
+          <span class="glyph" aria-hidden="true">🎙️</span><span class="tip">Voice picking — HackUPC</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="strip" aria-hidden="true">
+      <div class="strip-track">
+        <span><b>Muvyt</b> — live with paying customers <i class="dot">●</i></span>
+        <span><b>Camellos</b> — on the App Store in 16 days <i class="dot">●</i></span>
+        <span>ML in production at <b>Shalion</b> <i class="dot">●</i></span>
+        <span>Google <b>Gemini Hackathon</b> build <i class="dot">●</i></span>
+        <span><b>Datathon FME 2025</b> <i class="dot">●</i></span>
+        <span>trained on <b>MareNostrum 5</b> <i class="dot">●</i></span>
+        <span><b>Muvyt</b> — live with paying customers <i class="dot">●</i></span>
+        <span><b>Camellos</b> — on the App Store in 16 days <i class="dot">●</i></span>
+        <span>ML in production at <b>Shalion</b> <i class="dot">●</i></span>
+        <span>Google <b>Gemini Hackathon</b> build <i class="dot">●</i></span>
+        <span><b>Datathon FME 2025</b> <i class="dot">●</i></span>
+        <span>trained on <b>MareNostrum 5</b> <i class="dot">●</i></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT SHELF ============ -->
+  <section class="shelf wrap" id="products">
+    <div class="shelf-head reveal">
+      <span class="eyebrow" style="--tint: var(--brand)">Personal projects</span>
+      <h2 class="section-title">Personal projects I am proud of.</h2>
+      <p class="section-sub">Five things I made on my own initiative — from a revenue-generating startup to weekend hackathon builds. Each one opens like a product page, because that's what they are.</p>
+    </div>
+
+    <div class="bento">
+
+      <!-- MUVYT -->
+      <a class="p-card featured span-6 reveal" href="projects/muvyt.html" style="--tint: var(--c-muvyt); --tint-ink: #3a48c9">
+        <div class="p-body">
+          <span class="badge live">Live · paid beta</span>
+          <h3><img class="app-ico" src="assets/img/muvyt/logo.png" alt="">Muvyt</h3>
+          <p class="desc">A studio in the browser: type an idea, get a finished, editable YouTube video — script, voiceover, ~80 AI images and final render. Co-founded with Guifre. <b>Real Stripe subscriptions, real customers.</b></p>
+          <div class="chips">
+            <span class="chip">FastAPI</span><span class="chip">Celery</span><span class="chip">Gemini</span><span class="chip">fal.ai</span><span class="chip">Stripe</span><span class="chip">React 19</span>
+          </div>
+          <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span></div>
+        </div>
+        <div class="p-media">
+          <div class="frame-browser">
+            <div class="bar"><i></i><i></i><i></i><span>muvyt.ai</span></div>
+            <img src="assets/img/muvyt/landing_hero.png" alt="Muvyt landing page — 'Convierte cualquier idea en un vídeo de YouTube en minutos'" width="1440" height="900" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </a>
+
+      <!-- CAMELLOS -->
+      <a class="p-card span-3 reveal" href="projects/camellos.html" style="--tint: var(--c-camellos); --tint-ink: #a86a06">
+        <div class="p-body">
+          <span class="badge live">On the App Store</span>
+          <h3><img class="app-ico" src="assets/img/camellos/icon.png" alt="">Camellos</h3>
+          <p class="desc">A party game where you auction your friends, bidding with camels. Built solo and shipped to the App Store <b>in 16 days</b>.</p>
+          <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span><span class="chip">Flutter · Supabase</span></div>
+        </div>
+        <div class="p-media">
+          <div class="frame-phone"><img src="assets/img/camellos/home.png" alt="Camellos home screen" width="644" height="1400" loading="lazy" decoding="async"></div>
+        </div>
+      </a>
+
+      <!-- STAILIST -->
+      <a class="p-card span-3 reveal" href="projects/stailist.html" style="--tint: var(--c-stailist); --tint-ink: #6d3fd1">
+        <div class="p-body">
+          <span class="badge">Gemini Hackathon · live demo</span>
+          <h3>StAIlist</h3>
+          <p class="desc">Your real wardrobe, digitized by Gemini vision agents — then outfits rendered <b>on an AI avatar of you</b>, matched to tomorrow's weather.</p>
+          <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span><span class="chip">Flutter · LangChain</span></div>
+        </div>
+        <div class="p-media">
+          <div class="frame-phone"><img src="assets/img/stailist/demo_welcome.png" alt="StAIlist welcome screen — your personal AI stylist" width="430" height="860" loading="lazy" decoding="async"></div>
+        </div>
+      </a>
+
+      <!-- DATATHON -->
+      <a class="p-card span-3 reveal" href="projects/lead-scoring.html" style="--tint: var(--c-datathon); --tint-ink: #0d7a3e">
+        <div class="p-body">
+          <span class="badge">Datathon FME 2025</span>
+          <h3>PPDLS</h3>
+          <p class="desc">Lead scoring that <b>argues its case</b>: an XGBoost + Random Forest ensemble, SHAP attribution, and an LLM that explains every prediction in plain language.</p>
+          <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span><span class="chip">SHAP · Streamlit</span></div>
+        </div>
+        <div class="gfx" aria-hidden="true">
+          <div class="gfx-bars">
+            <i style="--h:38"></i><i style="--h:62" class="hot"></i><i style="--h:24"></i><i style="--h:81" class="hot"></i><i style="--h:47"></i><i style="--h:29"></i><i style="--h:68" class="hot"></i><i style="--h:52"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- VOICE -->
+      <a class="p-card span-3 reveal" href="projects/warehouse-voice.html" style="--tint: var(--c-voice); --tint-ink: #b32e5e">
+        <div class="p-body">
+          <span class="badge">HackUPC 2024 · 36 hours</span>
+          <h3>Voice Picking</h3>
+          <p class="desc">A hands-free voice assistant for SEIDOR's warehouse challenge: <b>speak your order</b>, get routed through the aisles by pathfinding.</p>
+          <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span><span class="chip">Speech AI · Routing</span></div>
+        </div>
+        <div class="gfx" aria-hidden="true">
+          <div class="gfx-wave">
+            <i style="--h:30;--i:0"></i><i style="--h:52;--i:1"></i><i style="--h:74;--i:2"></i><i style="--h:46;--i:3"></i><i style="--h:88;--i:4"></i><i style="--h:60;--i:5"></i><i style="--h:34;--i:6"></i><i style="--h:70;--i:7"></i><i style="--h:48;--i:8"></i><i style="--h:26;--i:9"></i>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="exp wrap" id="experience">
+    <div class="reveal">
+      <span class="eyebrow" style="--tint: var(--c-shalion)">Experience</span>
+      <h2 class="section-title">Professional experience.</h2>
+      <p class="section-sub">What I did and what it changed — not a job-title list.</p>
+    </div>
+    <div class="exp-grid">
+
+      <div class="exp-card reveal" style="--tint: var(--c-shalion); --tint-ink: #1558b0">
+        <img class="brand-logo" src="assets/img/logos/shalion.svg" alt="Shalion" width="1615" height="345" loading="lazy">
+        <span class="role">AI &amp; Data Engineer · 2025–2026</span>
+        <h3>E-commerce analytics for global brands</h3>
+        <p>Handed an embryonic product and one question: <b>can we estimate any brand's sales on any retailer, without the retailer telling us?</b> I led the Market Share Engine from data pipelines on Snowflake to models to serverless AWS deployment — now running <b>weekly in production</b>, feeding the dashboards Shalion's clients pay for.</p>
+        <div class="exp-stats">
+          <div><b>3.8%</b><span>aggregate error vs. actuals</span></div>
+          <div><b>50+</b><span>retailers covered</span></div>
+          <div><b>~2%</b><span>of products have ground truth</span></div>
+        </div>
+        <a class="open" href="projects/market-share.html">Read the case study <span class="arr">→</span></a>
+      </div>
+
+      <div class="exp-card reveal" style="--tint: var(--c-muvyt); --tint-ink: #3a48c9">
+        <img class="brand-logo square" src="assets/img/muvyt/logo.png" alt="Muvyt" width="212" height="223" loading="lazy">
+        <span class="role">Co-founder · 2026–now</span>
+        <h3>Muvyt — my own startup</h3>
+        <p>Being a founder means the model is the easy part. With Guifre I've <b>priced plans from upstream token costs</b>, written the SLOs, load-tested to 1,000 concurrent users, hardened Stripe billing with database-level guarantees — and answered the support email.</p>
+        <div class="exp-stats">
+          <div><b>50</b><span>paid beta seats</span></div>
+          <div><b>600+</b><span>team commits in 4 months</span></div>
+          <div><b>250K+</b><span>subs on flagship customer channel</span></div>
+        </div>
+        <a class="open" href="projects/muvyt.html">Read the case study <span class="arr">→</span></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about wrap" id="about">
+    <div class="about-card reveal">
+      <img class="about-photo" src="assets/img/lluc.jpg" alt="Lluc Furriols">
+      <div class="about-copy">
+        <p class="big">BSc in AI at UPC Barcelona, exchange at <span class="tint">UC Chile</span>, deep learning on a national supercomputer — and still, everything I really know came from <span class="tint">putting things in front of real users</span> and watching what breaks.</p>
+        <div class="about-facts">
+          <span class="chip">📍 Barcelona</span>
+          <span class="chip">🎓 BSc in Artificial Intelligence, UPC '26</span>
+          <span class="chip">🌎 Exchange — UC Chile</span>
+          <span class="chip">🗣️ Catalan · Spanish · English</span>
+          <span class="chip">🐍 Python · PyTorch · FastAPI</span>
+          <span class="chip">⚛️ React · Supabase · AWS</span>
+          <span class="chip">♟️ Chess instructor</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-card reveal">
+      <h2>Got something worth building?</h2>
+      <p>I'm always up for interesting problems — AI products, ML systems, or a wild idea that needs shipping.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="mailto:llucfurriols@gmail.com">Email me <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="https://github.com/Llucfurriols" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <ul class="foot-links">
+        <li><a href="mailto:llucfurriols@gmail.com">Email</a></li>
+        <li><a href="https://github.com/Llucfurriols" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/lluc-furriols-llimargas-707125308" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://devpost.com/Llucfurriols" target="_blank" rel="noopener">Devpost</a></li>
+      </ul>
+      <p class="colophon">Hand-coded — HTML, CSS and one small JS file. © <span data-year>2026</span> Lluc Furriols Llimargas</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=2"></script>
+</body>
+</html>

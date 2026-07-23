@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University — Lluc Furriols</title>
+  <meta name="description" content="BSc in Artificial Intelligence at UPC Barcelona + exchange at UC Chile. An explorable curriculum map: what each course taught me, and the few projects worth showing.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-pill">
+    <a class="nav-logo" href="index.html"><img src="assets/img/lluc.jpg" alt="">Lluc</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="university.html" aria-current="page">University</a></li>
+        <li class="hide-sm"><a href="index.html#experience">Experience</a></li>
+        <li><a class="cta" href="mailto:llucfurriols@gmail.com">Say hi</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="uni-hero wrap">
+    <a class="crest reveal" href="https://www.fib.upc.edu/en" target="_blank" rel="noopener" aria-label="Facultat d'Informàtica de Barcelona, UPC">
+      <img src="assets/img/logos/upc-fib.svg" alt="Universitat Politècnica de Catalunya · Facultat d'Informàtica de Barcelona" width="700" height="142">
+    </a>
+    <span class="eyebrow reveal" style="--tint: var(--c-camellos)">The foundation</span>
+    <h1 class="section-title reveal" style="font-size: clamp(38px, 6vw, 72px)">Four years of AI,<br>tile by tile.</h1>
+    <p class="section-sub reveal" style="margin: 0 auto">The <b>BSc in Artificial Intelligence at UPC Barcelona</b> — one of Spain's first dedicated AI degrees — plus an exchange semester at <b>UC Chile</b>. This isn't a second project list: it's the map of what I learned. <b>Tap the highlighted tiles</b> to see what each course left me with.</p>
+  </section>
+
+  <!-- ============ CURRICULUM GRID ============ -->
+  <section class="curri wrap">
+    <div class="curri-legend reveal">
+      <span><i style="background: color-mix(in oklab, #e2ab15 45%, white)"></i>Foundations (Q1–Q2)</span>
+      <span><i style="background: color-mix(in oklab, #ec8a10 55%, white)"></i>AI core (Q3–Q6)</span>
+      <span><b style="font-family: var(--mono); font-size: 11px">＋</b>&nbsp;expandable — the ones worth your tap</span>
+    </div>
+
+    <!-- Q1 -->
+    <div class="curri-row reveal">
+      <div class="curri-q">Q1</div>
+      <div class="curri-tiles" style="--th: #e2ab15">
+        <div class="tile muted" style="--th: #e2ab15"><b>FM</b><span>Mathematical Foundations</span></div>
+        <div class="tile muted" style="--th: #e2ab15"><b>FC</b><span>Computer Fundamentals</span></div>
+        <div class="tile muted" style="--th: #e2ab15"><b>PA1</b><span>Programming &amp; Algorithms I</span></div>
+        <div class="tile muted" style="--th: #e2ab15"><b>ALG</b><span>Algebra</span></div>
+        <div class="tile muted" style="--th: #e2ab15"><b>CRA</b><span>Knowledge &amp; Automated Reasoning</span></div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="curri-row reveal">
+      <div class="curri-q">Q2</div>
+      <div class="curri-tiles" style="--th: #e2ab15">
+        <button class="tile" data-open aria-controls="p-ir" style="--th: #e2ab15"><b>IR</b><span>Intro to Robotics</span></button>
+        <div class="tile muted" style="--th: #e2ab15"><b>PA2</b><span>Programming &amp; Algorithms II</span></div>
+        <div class="tile muted" style="--th: #e2ab15"><b>CAL</b><span>Calculus</span></div>
+        <button class="tile" data-open aria-controls="p-mss" style="--th: #e2ab15"><b>MSS</b><span>Systems Modeling &amp; Simulation</span></button>
+        <div class="tile muted" style="--th: #e2ab15"><b>IE</b><span>Intro to Statistics</span></div>
+
+        <div class="curri-panel" id="p-ir"><div class="panel-grid">
+          <div>
+            <h4>Introduction to Robotics</h4>
+            <p>Kinematics, Jacobians and Kalman filtering in MATLAB — and a final project that <b>actually drives</b>: a wall-following TurtleBot in ROS/C++, fusing LiDAR and odometry into a 10&nbsp;Hz reactive control loop.</p>
+            <div class="chips"><span class="chip">ROS</span><span class="chip">C++</span><span class="chip">LiDAR</span><span class="chip">Kalman filters</span><span class="chip">MATLAB</span></div>
+          </div>
+        </div></div>
+        <div class="curri-panel" id="p-mss"><div class="panel-grid">
+          <div>
+            <h4>Systems Modeling &amp; Simulation</h4>
+            <p>Discrete-event simulation: modeled a supermarket in FlexSim, found the queue bottlenecks and proposed a layout backed by data; validated random-number generators with chi-squared tests in R.</p>
+            <div class="chips"><span class="chip">FlexSim</span><span class="chip">R</span><span class="chip">Discrete-event simulation</span></div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="curri-row reveal">
+      <div class="curri-q">Q3</div>
+      <div class="curri-tiles" style="--th: #ec9312">
+        <button class="tile" data-open aria-controls="p-psd" style="--th: #ec9312"><b>PSD</b><span>Parallelism &amp; Distributed Systems</span></button>
+        <button class="tile" data-open aria-controls="p-me" style="--th: #ec9312"><b>ME</b><span>Statistical Modeling</span></button>
+        <button class="tile" data-open aria-controls="p-iaa" style="--th: #ec9312"><b>IAA</b><span>Intro to Machine Learning</span></button>
+        <div class="tile muted" style="--th: #ec9312"><b>IBD</b><span>Intro to Databases</span></div>
+        <button class="tile" data-open aria-controls="p-abia" style="--th: #ec9312"><b>ABIA</b><span>Basic Algorithms for AI</span></button>
+
+        <div class="curri-panel" id="p-psd"><div class="panel-grid">
+          <div>
+            <h4>Parallelism &amp; Distributed Systems</h4>
+            <p>C on the UPC cluster: profiled K-means, found the 98% hotspot, parallelized it with OpenMP for a <b>12.9× speedup on 20 threads</b> — with the Amdahl's-law analysis of why it plateaus. Also SIMD intrinsics and a data-parallel MLP trainer.</p>
+            <div class="chips"><span class="chip">C</span><span class="chip">OpenMP</span><span class="chip">SIMD</span><span class="chip">Profiling</span></div>
+          </div>
+        </div></div>
+        <div class="curri-panel" id="p-me"><div class="panel-grid">
+          <div>
+            <h4>Statistical Modeling</h4>
+            <p>A full R pipeline on a Steam-games dataset: PCA, Gower-distance clustering with per-cluster profiling, and a GLM with stepwise selection predicting review positivity. Statistics as a craft, not a formula sheet.</p>
+            <div class="chips"><span class="chip">R</span><span class="chip">GLMs</span><span class="chip">PCA</span><span class="chip">Clustering</span></div>
+          </div>
+        </div></div>
+        <div class="curri-panel" id="p-iaa"><div class="panel-grid">
+          <div>
+            <h4>Introduction to Machine Learning</h4>
+            <p>The classic toolbox — regression, classification, clustering, boosting — capped by a solo project predicting <b>cirrhosis patient survival</b>: leakage-safe preprocessing, SMOTENC balancing, a fairness-motivated feature removal, and a formal Google-style model card. My first taste of responsible AI done properly.</p>
+            <div class="chips"><span class="chip">scikit-learn</span><span class="chip">pandas</span><span class="chip">Model cards</span><span class="chip">Fairness</span></div>
+          </div>
+        </div></div>
+        <div class="curri-panel" id="p-abia"><div class="panel-grid">
+          <div>
+            <h4>Basic Algorithms for AI</h4>
+            <p>Classic AI that still earns its keep: optimized Barcelona's <b>Bicing bike redistribution</b> with hill climbing and simulated annealing, and built a <b>PDDL planner</b> that schedules a year of reading under page budgets — its plans animated in PyGame.</p>
+            <div class="chips"><span class="chip">Local search</span><span class="chip">Simulated annealing</span><span class="chip">PDDL</span><span class="chip">Python</span></div>
+            <a class="repo-a" href="https://github.com/Llucfurriols/Maximizing-Benefit-in-Bicing-Networks" target="_blank" rel="noopener">Bicing repo ↗</a> &nbsp;
+            <a class="repo-a" href="https://github.com/mikirop22/Intelligent-Reading-Scheduler-PDDL" target="_blank" rel="noopener">PDDL repo ↗</a>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="curri-row reveal">
+      <div class="curri-q">Q4</div>
+      <div class="curri-tiles" style="--th: #ea8b10">
+        <div class="tile muted" style="--th: #ea8b10"><b>OPT</b><span>Optimization</span></div>
+        <div class="tile muted" style="--th: #ea8b10"><b>PAA</b><span>Advanced Programming &amp; Algorithms</span></div>
+        <div class="tile muted" style="--th: #ea8b10"><b>PMAAD</b><span>Preprocessing &amp; Advanced Data Models</span></div>
+        <button class="tile" data-open aria-controls="p-plh" style="--th: #ea8b10"><b>PLH</b><span>Natural Language Processing</span></button>
+        <button class="tile" data-open aria-controls="p-xndl" style="--th: #ea8b10"><b>XNDL</b><span>Neural Networks &amp; Deep Learning</span></button>
+
+        <div class="curri-panel" id="p-plh"><div class="panel-grid">
+          <div>
+            <h4>Natural Language Processing</h4>
+            <p>NLP from first principles: a six-language identifier built on <b>character trigrams with Lidstone smoothing — 99.66% sentence accuracy</b>, no ML library for the model. Plus sentiment classification and CRF-based POS/NER tagging for Spanish and Dutch.</p>
+            <div class="chips"><span class="chip">NLTK</span><span class="chip">n-grams</span><span class="chip">CRFs</span><span class="chip">Python</span></div>
+            <a class="repo-a" href="https://github.com/Llucfurriols/Detector-idioma" target="_blank" rel="noopener">Language detector repo ↗</a>
+          </div>
+        </div></div>
+        <div class="curri-panel" id="p-xndl"><div class="panel-grid">
+          <div>
+            <h4>Neural Networks &amp; Deep Learning</h4>
+            <p>A CNN designed <b>from scratch — no transfer learning allowed</b> — classifying 29 museum-art mediums (MAMe benchmark). Six documented ablation rounds on a SLURM GPU cluster took it from 44% to <b>81.5% test accuracy</b>. The discipline mattered more than the number.</p>
+            <div class="chips"><span class="chip">TensorFlow / Keras</span><span class="chip">SLURM</span><span class="chip">Ablations</span><span class="chip">Data augmentation</span></div>
+          </div>
+          <figure class="mini-proj">
+            <img src="assets/img/uni/mame_confusion.png" alt="29-class confusion matrix of the MAMe classifier" width="1600" height="1600" loading="lazy" decoding="async">
+            <figcaption>29×29 confusion matrix — errors cluster among visually similar mediums</figcaption>
+          </figure>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="curri-row reveal">
+      <div class="curri-q">Q5</div>
+      <div class="curri-tiles" style="--th: #e8830e">
+        <button class="tile" data-open aria-controls="p-vo" style="--th: #e8830e"><b>VO</b><span>Computer Vision</span></button>
+        <button class="tile" data-open aria-controls="p-tvd" style="--th: #e8830e"><b>TVD</b><span>Speech &amp; Dialogue Processing</span></button>
+        <button class="tile" data-open aria-controls="p-cap" style="--th: #e8830e"><b>CAP</b><span>High-Performance Computing</span></button>
+        <button class="tile" data-open aria-controls="p-aprns" style="--th: #e8830e"><b>APRNS</b><span>Reinforcement &amp; Unsupervised Learning</span></button>
+        <button class="tile" data-open aria-controls="p-sbc" style="--th: #e8830e"><b>SBC</b><span>Knowledge-Based Systems</span></button>
+
+        <div class="curri-panel" id="p-vo"><div class="panel-grid">
+          <div>
+            <h4>Computer Vision</h4>
+            <p>Both ends of the spectrum: <b>fine-tuned YOLOv8</b> on an indoor-objects dataset I converted myself (<b>91.4% precision</b>, 77.9% mAP@50, honest held-out validation) — and counted pharmacy pills with <b>zero training</b>: morphology, distance transform, watershed. Classical vision still wins when the problem is geometric.</p>
+            <div class="chips"><span class="chip">YOLOv8</span><span class="chip">PyTorch</span><span class="chip">OpenCV</span><span class="chip">MATLAB</span></div>
+          </div>
+          <figure class="mini-proj">
+            <img src="assets/img/uni/pill_distance.png" alt="Distance transform seeding watershed pill segmentation" width="839" height="1116" loading="lazy" decoding="async">
+            <figcaption>Distance transform seeding the watershed — each peak becomes one pill</figcaption>
+          </figure>
+        </div></div>
+        <div class="curri-panel" id="p-tvd"><div class="panel-grid">
+          <div>
+            <h4>Speech &amp; Dialogue Processing</h4>
+            <p>Built "Lara", a rule-based housing-search chatbot with a Flask front-end, then competed on <b>31-class spoken-command recognition</b> (65,000 audio clips) with CNN and RNN classifiers over spectrograms. Also presented the TokenFormer paper.</p>
+            <div class="chips"><span class="chip">TensorFlow</span><span class="chip">Spectrograms</span><span class="chip">Flask</span><span class="chip">Dialogue systems</span></div>
+          </div>
+        </div></div>
+        <div class="curri-panel" id="p-cap"><div class="panel-grid">
+          <div>
+            <h4>High-Performance Computing for AI</h4>
+            <p>Hands-on with <b>MareNostrum 5</b>, the national supercomputer: SLURM, Singularity containers, a Hadoop cluster inside them, Spark — and the capstone: scaling Vision Transformer training with PyTorch DDP from 217 to 3,294 img/s. <b>15.18× speedup on 16 GPUs</b>, and a clean lesson in why small models stop scaling first.</p>
+            <div class="chips"><span class="chip">PyTorch DDP</span><span class="chip">SLURM</span><span class="chip">MareNostrum 5</span><span class="chip">Spark</span><span class="chip">bf16</span></div>
+          </div>
+          <figure class="mini-proj">
+            <img src="assets/img/uni/speedup_vs_gpus.png" alt="Observed vs ideal speedup scaling to 16 GPUs" width="1000" height="500" loading="lazy" decoding="async">
+            <figcaption>Observed vs. ideal speedup, 1 → 16 GPUs</figcaption>
+          </figure>
+        </div></div>
+        <div class="curri-panel" id="p-aprns"><div class="panel-grid">
+          <div>
+            <h4>Reinforcement &amp; Unsupervised Learning</h4>
+            <p>The deep-RL stack implemented from the papers — DQN on Atari Pong from pixels, then <b>DDPG and TD3</b> for continuous-control LunarLander, trained on the BSC cluster. The generative block built <b>RealNVP normalizing flows</b> (these faces are sampled from mine) and VAEs by hand.</p>
+            <div class="chips"><span class="chip">PyTorch</span><span class="chip">Gymnasium</span><span class="chip">DDPG / TD3</span><span class="chip">Normalizing flows</span></div>
+          </div>
+          <figure class="mini-proj">
+            <img src="assets/img/uni/faces_generated.png" alt="Faces generated by a RealNVP normalizing flow" width="639" height="715" loading="lazy" decoding="async">
+            <figcaption>Faces sampled from my RealNVP flow</figcaption>
+          </figure>
+        </div></div>
+        <div class="curri-panel" id="p-sbc"><div class="panel-grid">
+          <div>
+            <h4>Knowledge-Based Systems</h4>
+            <p>A CLIPS expert system with a Protégé ontology, then a full <b>Case-Based Reasoning recommender over ~20,800 MoMA artworks</b>: retrieve similar visitors, adapt their museum routes, present in a Streamlit wizard, retain rated visits. One of the few course projects with a public repo you can run.</p>
+            <div class="chips"><span class="chip">CBR</span><span class="chip">CLIPS</span><span class="chip">K-means</span><span class="chip">Streamlit</span></div>
+            <a class="repo-a" href="https://github.com/polmf/SBC_2" target="_blank" rel="noopener">CBR recommender repo ↗</a>
+          </div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="curri-row reveal">
+      <div class="curri-q">Q6</div>
+      <div class="curri-tiles" style="--th: #e67b0c">
+        <div class="tile muted" style="--th: #e67b0c"><b>PAID</b><span>Intelligent Data Analysis Processes</span></div>
+        <div class="tile muted" style="--th: #e67b0c"><b>BDA</b><span>Advanced Databases</span></div>
+        <div class="tile muted" style="--th: #e67b0c"><b>PIA</b><span>Integrated AI Project</span></div>
+        <div class="tile muted" style="--th: #e67b0c"><b>AESIA</b><span>Ethical &amp; Social Aspects of AI</span></div>
+        <div class="tile muted" style="--th: #e67b0c"><b>RA</b><span>Advanced Robotics</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ERASMUS ============ -->
+  <section class="erasmus wrap">
+    <div class="erasmus-band reveal">
+      <div class="erasmus-head">
+        <div>
+          <span class="eyebrow" style="--tint: #d33">Exchange semester · 2026</span>
+          <h2 class="section-title" style="font-size: clamp(28px, 3.6vw, 44px)">🇨🇱 UC Chile, Santiago</h2>
+          <p class="section-sub">A semester at the <b>Pontificia Universidad Católica de Chile</b> — one of Latin America's most prestigious universities — mixing hard engineering courses with things UPC doesn't teach.</p>
+        </div>
+        <a class="uni-logo" href="https://www.uc.cl/" target="_blank" rel="noopener" aria-label="Pontificia Universidad Católica de Chile">
+          <img src="assets/img/logos/uc-chile.svg" alt="Pontificia Universidad Católica de Chile" width="209" height="120" loading="lazy">
+        </a>
+      </div>
+      <div class="erasmus-cards">
+
+        <div class="e-card reveal">
+          <span class="blk-label">IIC2440 · Engineering</span>
+          <h4>Massive Data Processing</h4>
+          <p>Built and <b>benchmarked four RAG retrievers</b> over 127,487 embedded interventions from Chile's legislative sessions: dense HNSW search, sparse BM25, GraphRAG over typed graph patterns, and hybrid RRF+MMR — on MillenniumDB, with LLM generation and a manual relevance evaluation. <b>Sparse won.</b> Knowing why is the point.</p>
+          <div class="chips"><span class="chip">RAG</span><span class="chip">HNSW</span><span class="chip">BM25</span><span class="chip">GraphRAG</span><span class="chip">MillenniumDB</span></div>
+        </div>
+
+        <div class="e-card reveal">
+          <span class="blk-label">IEE2714 · Engineering</span>
+          <h4>Image Processing</h4>
+          <p>Final project in <b>medical imaging</b>: automatic quantification of T1/T2 relaxation maps in whole-heart 3D cardiac MRI — auto-reformat to short-axis via PCA, myocardium segmentation, per-region AHA bullseye maps, and mask erosion for partial-volume robustness. <b>Classical image processing only, no ML allowed.</b></p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">Medical imaging</span><span class="chip">Segmentation</span><span class="chip">PCA</span></div>
+        </div>
+
+        <div class="e-card reveal">
+          <span class="blk-label">Business school</span>
+          <h4>Marketing Analytics</h4>
+          <p>The quantitative side of marketing, in R: segmentation and factor analysis, logit brand-choice models, Bass diffusion forecasting, conjoint analysis — and <b>text analytics on Airbnb Miami reviews</b>. Useful glasses for anyone building products.</p>
+          <div class="chips"><span class="chip">R</span><span class="chip">Conjoint</span><span class="chip">Logit models</span><span class="chip">Text analytics</span></div>
+        </div>
+
+        <div class="e-card reveal">
+          <span class="blk-label">IDI2025 · Capstone</span>
+          <h4>Technology &amp; Entrepreneurship</h4>
+          <p>Human-centered design capstone: we prototyped <b>LactoTrace</b>, a QR-based traceability app for the new <b>Human Milk Bank at Hospital UC CHRISTUS</b> — lot labels, donor codes, expiry and storage tracking, scan-to-trace. Health-tech with real stakeholders.</p>
+          <div class="chips"><span class="chip">Product design</span><span class="chip">Prototyping</span><span class="chip">Health-tech</span></div>
+          <a class="linky" href="https://www.linkedin.com/in/lluc-furriols-llimargas-707125308" target="_blank" rel="noopener">See it on LinkedIn ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap next-strip">
+    <a class="next-card" href="index.html#products" style="--next-tint: var(--brand)">
+      <div><span class="lbl">Enough theory</span><h3>Back to the products</h3></div>
+      <span class="arr">→</span>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-meta">
+      <ul class="foot-links">
+        <li><a href="mailto:llucfurriols@gmail.com">Email</a></li>
+        <li><a href="https://github.com/Llucfurriols" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/lluc-furriols-llimargas-707125308" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://devpost.com/Llucfurriols" target="_blank" rel="noopener">Devpost</a></li>
+      </ul>
+      <p class="colophon">Hand-coded — HTML, CSS and one small JS file. © <span data-year>2026</span> Lluc Furriols Llimargas</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=2"></script>
+</body>
+</html>

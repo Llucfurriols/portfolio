@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muvyt — Lluc Furriols</title>
+  <meta name="description" content="Muvyt: an AI studio that turns an idea into a finished, editable YouTube video. Co-founded, live, with real Stripe subscriptions. FastAPI · Celery · Gemini · fal.ai · Stripe.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=5">
+</head>
+<body style="--tint: var(--c-muvyt); --tint-ink: #3a48c9">
+
+<header class="nav">
+  <div class="nav-pill">
+    <a class="nav-logo" href="../index.html"><img src="../assets/img/lluc.jpg" alt="">Lluc</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html#products">Products</a></li>
+        <li><a href="../university.html">University</a></li>
+        <li class="hide-sm"><a href="../index.html#experience">Experience</a></li>
+        <li><a class="cta" href="mailto:llucfurriols@gmail.com">Say hi</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="pp-hero">
+    <div class="wrap">
+      <a class="crumbs" href="../index.html#products">← Back to the shelf</a>
+      <div class="pp-head">
+        <div>
+          <h1 class="reveal"><img class="app-ico" src="../assets/img/muvyt/logo.png" alt="">Muvyt</h1>
+          <p class="pp-tagline reveal">Type an idea. Get a finished, editable YouTube video — <b>script, voiceover, ~80 AI images and final render</b>. My startup, co-founded with Guifre Caballeria.</p>
+          <div class="pp-meta reveal">
+            <span class="badge live">Live · paid beta</span>
+            <span class="chip">Co-founder · product &amp; engineering</span>
+            <span class="chip">Mar 2026 – now</span>
+          </div>
+          <div class="pp-ctas reveal">
+            <a class="btn btn-primary" href="https://muvyt.ai" target="_blank" rel="noopener">Visit muvyt.ai <span class="arr">↗</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="pp-visual reveal">
+        <div class="frame-browser">
+          <div class="bar"><i></i><i></i><i></i><span>muvyt.ai — 29 of 51 launch seats left at capture time</span></div>
+          <img src="../assets/img/muvyt/landing_hero.png" alt="Muvyt landing: 'Convierte cualquier idea en un vídeo de YouTube en minutos'" width="1440" height="900" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="pp-bento">
+
+      <div class="blk span-3 reveal">
+        <span class="blk-label">What it is</span>
+        <h3>A faceless-video studio in the browser</h3>
+        <p>Muvyt generates the <b>entire</b> video from one prompt, then hands you a browser editor — canvas preview, TikTok-style subtitles, per-segment image regeneration and clip animation — to finish the last 10% yourself.</p>
+      </div>
+
+      <div class="blk span-3 reveal">
+        <span class="blk-label">The problem</span>
+        <h3>One video = five tools and hours of grind</h3>
+        <p>Faceless YouTube channels are a real business, but each upload means chaining script, TTS, timestamps, dozens of images and an editor. AI tools automate single steps — <b>nobody automated the whole pipeline</b> for Spanish-speaking creators.</p>
+      </div>
+
+      <div class="blk tinted span-4 reveal">
+        <span class="blk-label">How it works</span>
+        <div class="steps">
+          <div class="step"><span class="n">01</span><p><b>Gemini writes the script</b> from your idea or a YouTube transcript</p></div>
+          <div class="step"><span class="n">02</span><p><b>Gemini TTS narrates it</b> — 30 voices to pick from</p></div>
+          <div class="step"><span class="n">03</span><p><b>Speech-to-text maps timestamps</b> word by word</p></div>
+          <div class="step"><span class="n">04</span><p><b>fal.ai generates one image per ~8s segment</b> (FLUX &amp; friends)</p></div>
+          <div class="step"><span class="n">05</span><p><b>ffmpeg renders</b> — and the editor opens for the final touch</p></div>
+        </div>
+      </div>
+
+      <div class="blk span-2 reveal">
+        <span class="blk-label">Stack</span>
+        <div class="chips">
+          <span class="chip">Python · FastAPI</span><span class="chip">Celery + Redis</span><span class="chip">Supabase</span><span class="chip">Stripe</span><span class="chip">Vertex AI Gemini</span><span class="chip">fal.ai</span><span class="chip">ffmpeg</span><span class="chip">React 19 + Vite</span><span class="chip">Render</span><span class="chip">Sentry</span><span class="chip">Locust</span><span class="chip">Playwright</span>
+        </div>
+      </div>
+
+      <div class="blk span-6 reveal">
+        <span class="blk-label">Result</span>
+        <div class="stat-tiles">
+          <div class="stat-tile"><b>50</b><span>paid beta seats, cap enforced by a DB trigger</span></div>
+          <div class="stat-tile"><b>2000<em>+</em></b><span>waitlist signups before launch</span></div>
+          <div class="stat-tile"><b>250K<em>+</em></b><span>subscribers on the flagship customer's channel</span></div>
+          <div class="stat-tile"><b>1,000</b><span>concurrent users survived in load tests</span></div>
+          <div class="stat-tile"><b>99.5<em>%</em></b><span>availability SLO, alerts wired to Sentry</span></div>
+        </div>
+      </div>
+
+      <div class="blk span-3 reveal">
+        <span class="blk-label">Hard parts</span>
+        <h3>Money bugs get database-level fixes</h3>
+        <ul>
+          <li>An audit found upgrade-cycling could harvest credit allowances — fixed with a <b>partial unique index on the Stripe invoice ID</b> plus a trigger that makes wallet overdraft impossible</li>
+          <li>The signup rate limit silently collapsed all users into one bucket: the proxy masked IPs — solved parsing forwarded-for chains with trusted-hop stripping</li>
+          <li>Two ffmpeg renders can OOM a 2 GB worker — admission control now checks memory before accepting a job</li>
+        </ul>
+      </div>
+
+      <div class="blk dark span-3 reveal">
+        <span class="blk-label">What I learned</span>
+        <p class="quote">Founding something means the model is the easy part. <span class="tint" style="color:#9daaff">Pricing from token costs, SLOs, load tests, GDPR purges, the support inbox</span> — the buck stops with us, for the math and the invoice.</p>
+      </div>
+
+    </div>
+
+    <div class="next-strip">
+      <a class="next-card" href="camellos.html" style="--next-tint: var(--c-camellos)">
+        <div><span class="lbl">Next product</span><h3>Camellos 🐪</h3></div>
+        <span class="arr">→</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-meta">
+      <ul class="foot-links">
+        <li><a href="mailto:llucfurriols@gmail.com">Email</a></li>
+        <li><a href="https://github.com/Llucfurriols" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/lluc-furriols-llimargas-707125308" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://devpost.com/Llucfurriols" target="_blank" rel="noopener">Devpost</a></li>
+      </ul>
+      <p class="colophon">Hand-coded — HTML, CSS and one small JS file. © <span data-year>2026</span> Lluc Furriols Llimargas</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js?v=2"></script>
+</body>
+</html>

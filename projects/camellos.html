@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camellos — Lluc Furriols</title>
+  <meta name="description" content="Camellos: a party auction game built in Flutter and shipped to the App Store in 16 days, with login-free realtime multiplayer on Supabase.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=5">
+</head>
+<body style="--tint: var(--c-camellos); --tint-ink: #a86a06">
+
+<header class="nav">
+  <div class="nav-pill">
+    <a class="nav-logo" href="../index.html"><img src="../assets/img/lluc.jpg" alt="">Lluc</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html#products">Products</a></li>
+        <li><a href="../university.html">University</a></li>
+        <li class="hide-sm"><a href="../index.html#experience">Experience</a></li>
+        <li><a class="cta" href="mailto:llucfurriols@gmail.com">Say hi</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="pp-hero">
+    <div class="wrap">
+      <a class="crumbs" href="../index.html#products">← Back to the shelf</a>
+      <div class="pp-head">
+        <div>
+          <h1 class="reveal"><img class="app-ico" src="../assets/img/camellos/icon.png" alt="">Camellos</h1>
+          <p class="pp-tagline reveal">A party game where everyone secretly throws names into a sack — friends, celebrities, whoever — and the group <b>auctions them off, bidding with camels</b>. Best merchant wins. Built solo, <b>first commit to App Store in 16 days</b>.</p>
+          <div class="pp-meta reveal">
+            <span class="badge live">Free on the App Store</span>
+            <span class="chip">Everything: design, code, store ops</span>
+            <span class="chip">Jun 22 → Jul 8, 2026</span>
+            <span class="chip">🇪🇸 🇦🇩 🇬🇧 es · ca · en</span>
+          </div>
+          <div class="pp-ctas reveal">
+            <a class="btn btn-primary" href="https://apps.apple.com/es/app/camellos/id6787272166" target="_blank" rel="noopener"> Download on the App Store <span class="arr">↗</span></a>
+            <a class="btn btn-ghost" href="https://llucfurriols.github.io/" target="_blank" rel="noopener">Landing page ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div style="padding-top: 34px">
+      <div class="hscroll reveal">
+        <div class="shot-phone"><img src="../assets/img/camellos/home.png" alt="Camellos home — the night bazaar" width="644" height="1400" decoding="async"></div>
+        <div class="shot-phone"><img src="../assets/img/camellos/subasta.png" alt="Live auction screen" width="644" height="1400" loading="lazy" decoding="async"></div>
+        <div class="shot-phone"><img src="../assets/img/camellos/sala_online.png" alt="Online room with CAM code" width="644" height="1400" loading="lazy" decoding="async"></div>
+        <div class="shot-phone"><img src="../assets/img/camellos/podio.png" alt="Final podium — the Sultan is crowned" width="644" height="1400" loading="lazy" decoding="async"></div>
+      </div>
+      <p class="hscroll-hint">← swipe the screens →</p>
+    </div>
+
+    <div class="pp-bento">
+
+      <div class="blk span-3 reveal">
+        <span class="blk-label">Why it exists</span>
+        <h3>Zero-friction party chaos</h3>
+        <p>Camellos was born from a game my friends and I already loved playing. The problem was that everything was manual: we had to write everyone's names in the iPhone Notes app, keep track of the game ourselves, and argue over whose turn it was. It worked, but it was slow and clunky.</p>
+
+        <p>So I built Camellos to make the experience effortless. The app handles all the game logic, letting everyone focus on the fun instead of the admin. You can play by <b>passing a single phone around the table</b> or create an online room with a simple 4-digit code so everyone can join from their own device. <b>No logins, no setup—just open the app and start playing.</b></p>      </div>
+
+      <div class="blk tinted span-3 reveal">
+        <span class="blk-label">A game night</span>
+        <div class="steps">
+          <div class="step"><span class="n">01</span><p><b>Fill the sack</b> — everyone secretly adds names</p></div>
+          <div class="step"><span class="n">02</span><p><b>Auction</b> — bid your camels on each name</p></div>
+          <div class="step"><span class="n">03</span><p><b>Build your team</b> — 3 starters plus bench</p></div>
+          <div class="step"><span class="n">04</span><p><b>Vote</b> — the group crowns the Sultán de la Subasta 👑</p></div>
+        </div>
+      </div>
+
+      <div class="blk span-3 reveal">
+        <span class="blk-label">The interesting engineering</span>
+        <h3>Multiplayer without accounts</h3>
+        <p>Online mode is <b>host-authoritative over Supabase Realtime</b>: the full game state is one JSONB document that only the host device writes; everyone else appends intentions (join, bid, vote) to an action queue. <b>One writer, zero race conditions, no auth system</b> — the room code is the security model.</p>
+        <p>Timers sync via a single end-timestamp; near-duplicate names ("Leo Messi" vs. "Messi") get caught by Levenshtein + Jaccard similarity.</p>
+      </div>
+
+      <div class="blk span-3 reveal">
+        <span class="blk-label">Shipping gauntlet</span>
+        <h3>Apple review, at speed</h3>
+        <ul>
+          <li>Custom post-clone script so <b>Xcode Cloud</b> could build Flutter at all</li>
+          <li>App Privacy labels, ATT, EU ad-consent (UMP), export-encryption declaration</li>
+          <li>Launch morning: fixing online rooms that survived after players left — and hand-drawing a Catalan flag, because iOS has no emoji for it</li>
+          <li>AdMob monetization with test ads in debug so review builds never fake clicks</li>
+        </ul>
+      </div>
+
+      <div class="blk span-4 reveal">
+        <span class="blk-label">Result</span>
+        <div class="stat-tiles">
+          <div class="stat-tile"><b>16</b><span>days — first commit to App Store</span></div>
+          <div class="stat-tile"><b>3</b><span>languages: Spanish, Catalan, English</span></div>
+          <div class="stat-tile"><b>v1.0.2</b><span>shipped 12 days after launch</span></div>
+          <div class="stat-tile"><b>15</b><span>unit tests on the pure auction engine</span></div>
+        </div>
+      </div>
+
+      <div class="blk dark span-2 reveal">
+        <span class="blk-label">What I learned</span>
+        <p class="quote">The cheapest way to win a race condition is to <span style="color:#ffc46b">never run one</span>. And store compliance eats half the calendar — plan for it.</p>
+      </div>
+
+    </div>
+
+    <div class="next-strip">
+      <a class="next-card" href="stailist.html" style="--next-tint: var(--c-stailist)">
+        <div><span class="lbl">Next product</span><h3>StAIlist</h3></div>
+        <span class="arr">→</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-meta">
+      <ul class="foot-links">
+        <li><a href="mailto:llucfurriols@gmail.com">Email</a></li>
+        <li><a href="https://github.com/Llucfurriols" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/lluc-furriols-llimargas-707125308" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://devpost.com/Llucfurriols" target="_blank" rel="noopener">Devpost</a></li>
+      </ul>
+      <p class="colophon">Hand-coded — HTML, CSS and one small JS file. © <span data-year>2026</span> Lluc Furriols Llimargas</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Share Engine @ Shalion — Lluc Furriols</title>
+  <meta name="description" content="A production ML system at Shalion estimating hidden e-commerce sales across 50+ retailers with ground truth for only ~2% of products. Python · XGBoost · Snowflake · AWS Fargate.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=5">
+</head>
+<body style="--tint: var(--c-shalion); --tint-ink: #1558b0">
+
+<header class="nav">
+  <div class="nav-pill">
+    <a class="nav-logo" href="../index.html"><img src="../assets/img/lluc.jpg" alt="">Lluc</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html#products">Products</a></li>
+        <li><a href="../university.html">University</a></li>
+        <li class="hide-sm"><a href="../index.html#experience">Experience</a></li>
+        <li><a class="cta" href="mailto:llucfurriols@gmail.com">Say hi</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="pp-hero">
+    <div class="wrap">
+      <a class="crumbs" href="../index.html#experience">← Back to experience</a>
+      <div class="pp-head">
+        <div>
+          <h1 class="reveal">Market Share Engine</h1>
+          <p class="pp-tagline reveal">My thesis wasn't a paper — it was a <b>production system at Shalion</b> that estimates the e-commerce sales <b>nobody publishes</b>, so brands can finally see their competitors' side of the shelf.</p>
+          <div class="pp-meta reveal">
+            <span class="badge live">In production · weekly runs</span>
+            <span class="chip">AI &amp; Data Engineer — lead developer</span>
+            <span class="chip">2025 – Jan 2026 · thesis at FIB-UPC</span>
+          </div>
+        </div>
+        <a class="brand-card reveal" href="https://www.shalion.com" target="_blank" rel="noopener" aria-label="Shalion">
+          <img src="../assets/img/logos/shalion.svg" alt="Shalion" width="1615" height="345">
+          <span>Built here · e-commerce analytics in 85+ countries</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="pp-bento">
+
+      <div class="blk span-3 reveal">
+        <span class="blk-label">The problem</span>
+        <h3>Retailers are walled gardens</h3>
+        <p>A brand knows its own numbers — and nothing else. Competitor sales and marketplace volume are invisible, and existing tools only work on Amazon. The brutal constraint: <b>ground truth existed for only ~2% of the products</b> to estimate. Everything else is inference over noisy, scraped signals.</p>
+      </div>
+
+      <div class="blk span-3 reveal">
+        <span class="blk-label">What I built</span>
+        <h3>An engine that adapts to the data it finds</h3>
+        <p>A modular Python pipeline whose <b>orchestrator inspects the signals available per retailer-category and routes to the right model</b> — so the system always answers, with the best method the data allows, unattended, every week.</p>
+      </div>
+
+      <div class="blk tinted span-4 reveal">
+        <span class="blk-label">The four scenarios</span>
+        <div class="steps">
+          <div class="step"><span class="n">S1</span><p><b>Client actuals available</b> → log-linear calibration of sales-vs-rank</p></div>
+          <div class="step"><span class="n">S2</span><p><b>Sales-proxy badges visible</b> → rank–sales regression, smoothed across weeks</p></div>
+          <div class="step"><span class="n">S3</span><p><b>Neither</b> → XGBoost trained teacher-student on S1's outputs</p></div>
+          <div class="step"><span class="n">S4</span><p><b>Cold start</b> → priors-based fallback, so it never returns silence</p></div>
+        </div>
+        <p style="margin-top:10px">Plus an <b>"Inertia"</b> momentum feature — each product vs. its trailing 4-week average — to catch promotions static features miss.</p>
+      </div>
+
+      <div class="blk span-2 reveal">
+        <span class="blk-label">Stack</span>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">XGBoost</span><span class="chip">Snowflake</span><span class="chip">dbt</span><span class="chip">AWS S3</span><span class="chip">AWS Fargate</span><span class="chip">Docker</span><span class="chip">Streamlit</span><span class="chip">CI/CD</span>
+        </div>
+      </div>
+
+      <div class="blk span-6 reveal">
+        <span class="blk-label">Result</span>
+        <div class="stat-tiles">
+          <div class="stat-tile"><b>3.8<em>%</em></b><span>aggregate error vs. client actuals (calibrated pipeline)</span></div>
+          <div class="stat-tile"><b>50<em>+</em></b><span>retailers covered, Amazon included</span></div>
+          <div class="stat-tile"><b>~20<em>min</em></b><span>weekly serverless run — near-zero idle cost</span></div>
+          <div class="stat-tile"><b>2<em>%</em></b><span>of products have labels; the rest is inference</span></div>
+        </div>
+      </div>
+
+      <div class="blk span-3 reveal">
+        <figure class="shot">
+          <img src="../assets/img/tfg/pred_vs_actual.png" alt="Predicted vs actual log market share — points hugging the diagonal" width="900" height="900" loading="lazy" decoding="async">
+          <figcaption>Predicted vs. actual log market share (XGBoost pipeline). The diagonal is where you want to live.</figcaption>
+        </figure>
+      </div>
+
+      <div class="blk span-3 reveal">
+        <span class="blk-label">Hard parts</span>
+        <h3>Signals that lie, labels that don't exist</h3>
+        <ul>
+          <li><b>I had to reject deep learning</b> — with 2% labels, capacity memorizes the labeled slice and hallucinates the rest. Interpretable classical models won on stability and explainability</li>
+          <li>Best-seller ranks are stochastic and retailer-manipulated; scrapers break silently — every input is optional by design</li>
+          <li>A Streamlit "control tower" monitors every run — a model earns production trust by being inspectable</li>
+        </ul>
+      </div>
+
+      <div class="blk dark span-6 reveal">
+        <span class="blk-label">What I learned</span>
+        <p class="quote">The industry question isn't <span style="color:#8db7f5">"how do I maximize the metric?"</span> — it's <span style="color:#8db7f5">"how do I build a system that processes millions of rows weekly without failing, whose numbers a client can trust?"</span> Model complexity must be proportional to data availability.</p>
+        <p style="font-size:12.5px; opacity:.6">Proprietary details of Shalion's platform are deliberately described at a high level.</p>
+      </div>
+
+    </div>
+
+    <div class="next-strip">
+      <a class="next-card" href="muvyt.html" style="--next-tint: var(--c-muvyt)">
+        <div><span class="lbl">Related product</span><h3>Muvyt</h3></div>
+        <span class="arr">→</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-meta">
+      <ul class="foot-links">
+        <li><a href="mailto:llucfurriols@gmail.com">Email</a></li>
+        <li><a href="https://github.com/Llucfurriols" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/lluc-furriols-llimargas-707125308" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://devpost.com/Llucfurriols" target="_blank" rel="noopener">Devpost</a></li>
+      </ul>
+      <p class="colophon">Hand-coded — HTML, CSS and one small JS file. © <span data-year>2026</span> Lluc Furriols Llimargas</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js?v=2"></script>
+</body>
+</html>
