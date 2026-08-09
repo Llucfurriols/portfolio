@@ -5,24 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lluc Furriols — I build AI products</title>
   <meta name="description" content="AI engineer from Barcelona (UPC '26). Co-founder of Muvyt. A shelf of real products: a revenue-generating AI SaaS, an App Store game, production ML, hackathon builds.">
+  <meta name="author" content="Lluc Furriols Llimargas">
+  <link rel="canonical" href="https://llucfurriols.github.io/portfolio/">
   <meta property="og:title" content="Lluc Furriols — I build AI products">
   <meta property="og:description" content="A shelf of real products: an AI SaaS with paying customers, an App Store game, production ML at Shalion, hackathon builds.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://llucfurriols.github.io/portfolio/">
+  <meta property="og:image" content="https://llucfurriols.github.io/portfolio/assets/img/lluc.jpg">
+  <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
 </head>
 <body>
 
 <header class="nav">
   <div class="nav-pill">
     <a class="nav-logo" href="index.html"><img src="assets/img/lluc.jpg" alt="">Lluc</a>
-    <nav>
+    <nav aria-label="Main">
       <ul class="nav-links">
         <li><a href="#products">Products</a></li>
-        <li><a href="university.html">University</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li class="hide-sm"><a href="university.html">University</a></li>
         <li class="hide-sm"><a href="#experience">Experience</a></li>
         <li><a class="cta" href="mailto:llucfurriols@gmail.com">Say hi</a></li>
       </ul>
@@ -42,6 +48,12 @@
       <div class="hero-ctas reveal">
         <a class="btn btn-primary" href="#products">Browse the shelf <span class="arr">↓</span></a>
         <a class="btn btn-ghost" href="mailto:llucfurriols@gmail.com">llucfurriols@gmail.com</a>
+      </div>
+      <div class="p-links hero-links reveal">
+        <a href="https://github.com/Llucfurriols" target="_blank" rel="noopener">GitHub <span class="ic">↗</span></a>
+        <a href="https://www.linkedin.com/in/lluc-furriols-llimargas-707125308" target="_blank" rel="noopener">LinkedIn <span class="ic">↗</span></a>
+        <a href="https://devpost.com/Llucfurriols" target="_blank" rel="noopener">Devpost <span class="ic">↗</span></a>
+        <a href="#skills">Skills &amp; stack</a>
       </div>
 
       <div class="dock reveal" aria-label="Shortcuts to the products">
@@ -86,19 +98,22 @@
     <div class="shelf-head reveal">
       <span class="eyebrow" style="--tint: var(--brand)">Personal projects</span>
       <h2 class="section-title">Personal projects I am proud of.</h2>
-      <p class="section-sub">Five things I made on my own initiative — from a revenue-generating startup to weekend hackathon builds. Each one opens like a product page, because that's what they are.</p>
+      <p class="section-sub">Five things I made on my own initiative — from a revenue-generating startup to weekend hackathon builds. Every card carries its full stack and its links: try it, watch the demo, or read the case study.</p>
     </div>
 
     <div class="bento">
 
       <!-- MUVYT -->
-      <a class="p-card featured span-6 reveal" href="projects/muvyt.html" style="--tint: var(--c-muvyt); --tint-ink: #3a48c9">
+      <div class="p-card featured span-6 reveal" style="--tint: var(--c-muvyt); --tint-ink: #3a48c9">
         <div class="p-body">
           <span class="badge live">Live · paid beta</span>
-          <h3><img class="app-ico" src="assets/img/muvyt/logo.png" alt="">Muvyt</h3>
+          <h3><img class="app-ico" src="assets/img/muvyt/logo.png" alt=""><a class="p-link" href="projects/muvyt.html">Muvyt</a></h3>
           <p class="desc">A studio in the browser: type an idea, get a finished, editable YouTube video — script, voiceover, ~80 AI images and final render. Co-founded with Guifre. <b>Real Stripe subscriptions, real customers.</b></p>
           <div class="chips">
-            <span class="chip">FastAPI</span><span class="chip">Celery</span><span class="chip">Gemini</span><span class="chip">fal.ai</span><span class="chip">Stripe</span><span class="chip">React 19</span>
+            <span class="chip">Python · FastAPI</span><span class="chip">Celery + Redis</span><span class="chip">Vertex AI Gemini</span><span class="chip">fal.ai</span><span class="chip">ffmpeg</span><span class="chip">Supabase</span><span class="chip">Stripe</span><span class="chip">React 19 + Vite</span><span class="chip">Render</span><span class="chip">Sentry</span><span class="chip">Locust</span><span class="chip">Playwright</span>
+          </div>
+          <div class="p-links">
+            <a href="https://muvyt.ai" target="_blank" rel="noopener">Visit muvyt.ai <span class="ic">↗</span></a>
           </div>
           <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span></div>
         </div>
@@ -108,65 +123,159 @@
             <img src="assets/img/muvyt/landing_hero.png" alt="Muvyt landing page — 'Convierte cualquier idea en un vídeo de YouTube en minutos'" width="1440" height="900" loading="lazy" decoding="async">
           </div>
         </div>
-      </a>
+      </div>
 
       <!-- CAMELLOS -->
-      <a class="p-card span-3 reveal" href="projects/camellos.html" style="--tint: var(--c-camellos); --tint-ink: #a86a06">
+      <div class="p-card span-3 reveal" style="--tint: var(--c-camellos); --tint-ink: #a86a06">
         <div class="p-body">
           <span class="badge live">On the App Store</span>
-          <h3><img class="app-ico" src="assets/img/camellos/icon.png" alt="">Camellos</h3>
+          <h3><img class="app-ico" src="assets/img/camellos/icon.png" alt=""><a class="p-link" href="projects/camellos.html">Camellos</a></h3>
           <p class="desc">A party game where you auction your friends, bidding with camels. Built solo and shipped to the App Store <b>in 16 days</b>.</p>
-          <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span><span class="chip">Flutter · Supabase</span></div>
+          <div class="chips">
+            <span class="chip">Flutter · Dart</span><span class="chip">Supabase Realtime</span><span class="chip">PostgreSQL JSONB</span><span class="chip">Xcode Cloud</span><span class="chip">AdMob + UMP</span><span class="chip">App Store Connect</span>
+          </div>
+          <div class="p-links">
+            <a href="https://apps.apple.com/es/app/camellos/id6787272166" target="_blank" rel="noopener">App Store <span class="ic">↗</span></a>
+            <a href="https://llucfurriols.github.io/" target="_blank" rel="noopener">Landing <span class="ic">↗</span></a>
+          </div>
+          <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span></div>
         </div>
         <div class="p-media">
           <div class="frame-phone"><img src="assets/img/camellos/home.png" alt="Camellos home screen" width="644" height="1400" loading="lazy" decoding="async"></div>
         </div>
-      </a>
+      </div>
 
       <!-- STAILIST -->
-      <a class="p-card span-3 reveal" href="projects/stailist.html" style="--tint: var(--c-stailist); --tint-ink: #6d3fd1">
+      <div class="p-card span-3 reveal" style="--tint: var(--c-stailist); --tint-ink: #6d3fd1">
         <div class="p-body">
-          <span class="badge">Gemini Hackathon · live demo</span>
-          <h3>StAIlist</h3>
+          <span class="badge">Gemini Hackathon · demo video</span>
+          <h3><a class="p-link" href="projects/stailist.html">StAIlist</a></h3>
           <p class="desc">Your real wardrobe, digitized by Gemini vision agents — then outfits rendered <b>on an AI avatar of you</b>, matched to tomorrow's weather.</p>
-          <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span><span class="chip">Flutter · LangChain</span></div>
+          <div class="chips">
+            <span class="chip">Flutter · Dart</span><span class="chip">FastAPI</span><span class="chip">LangChain</span><span class="chip">Gemini vision + image gen</span><span class="chip">Supabase</span><span class="chip">Pydantic</span><span class="chip">Firebase Hosting</span><span class="chip">Render</span>
+          </div>
+          <div class="p-links">
+            <a class="play" href="https://www.youtube.com/watch?v=mNPfGIvHMls&t=31s" target="_blank" rel="noopener"><span class="ic">▶</span> Demo video</a>
+            <a href="https://devpost.com/software/stailist" target="_blank" rel="noopener">Devpost <span class="ic">↗</span></a>
+            <a href="https://github.com/datzii/StAIlist" target="_blank" rel="noopener">GitHub <span class="ic">↗</span></a>
+          </div>
+          <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span></div>
         </div>
         <div class="p-media">
           <div class="frame-phone"><img src="assets/img/stailist/demo_welcome.png" alt="StAIlist welcome screen — your personal AI stylist" width="430" height="860" loading="lazy" decoding="async"></div>
         </div>
-      </a>
+      </div>
 
       <!-- DATATHON -->
-      <a class="p-card span-3 reveal" href="projects/lead-scoring.html" style="--tint: var(--c-datathon); --tint-ink: #0d7a3e">
+      <div class="p-card span-3 reveal" style="--tint: var(--c-datathon); --tint-ink: #0d7a3e">
         <div class="p-body">
           <span class="badge">Datathon FME 2025</span>
-          <h3>PPDLS</h3>
+          <h3><a class="p-link" href="projects/lead-scoring.html">PPDLS</a></h3>
           <p class="desc">Lead scoring that <b>argues its case</b>: an XGBoost + Random Forest ensemble, SHAP attribution, and an LLM that explains every prediction in plain language.</p>
-          <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span><span class="chip">SHAP · Streamlit</span></div>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">XGBoost</span><span class="chip">Random Forest</span><span class="chip">scikit-learn</span><span class="chip">SHAP</span><span class="chip">Streamlit</span><span class="chip">OpenAI API</span>
+          </div>
+          <div class="p-links">
+            <a href="https://devpost.com/software/ppdls" target="_blank" rel="noopener">Devpost <span class="ic">↗</span></a>
+            <a href="https://github.com/jordiabesuny/Datathon-2025" target="_blank" rel="noopener">GitHub <span class="ic">↗</span></a>
+          </div>
+          <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span></div>
         </div>
         <div class="gfx" aria-hidden="true">
           <div class="gfx-bars">
             <i style="--h:38"></i><i style="--h:62" class="hot"></i><i style="--h:24"></i><i style="--h:81" class="hot"></i><i style="--h:47"></i><i style="--h:29"></i><i style="--h:68" class="hot"></i><i style="--h:52"></i>
           </div>
         </div>
-      </a>
+      </div>
 
       <!-- VOICE -->
-      <a class="p-card span-3 reveal" href="projects/warehouse-voice.html" style="--tint: var(--c-voice); --tint-ink: #b32e5e">
+      <div class="p-card span-3 reveal" style="--tint: var(--c-voice); --tint-ink: #b32e5e">
         <div class="p-body">
           <span class="badge">HackUPC 2024 · 36 hours</span>
-          <h3>Voice Picking</h3>
+          <h3><a class="p-link" href="projects/warehouse-voice.html">Voice Picking</a></h3>
           <p class="desc">A hands-free voice assistant for SEIDOR's warehouse challenge: <b>speak your order</b>, get routed through the aisles by pathfinding.</p>
-          <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span><span class="chip">Speech AI · Routing</span></div>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">Speech-to-text</span><span class="chip">Conversational AI</span><span class="chip">Pathfinding</span>
+          </div>
+          <div class="p-links">
+            <a href="https://hackupc-2024.devpost.com/" target="_blank" rel="noopener">HackUPC 2024 <span class="ic">↗</span></a>
+          </div>
+          <div class="p-foot"><span class="open">Open the case study <span class="arr">→</span></span></div>
         </div>
         <div class="gfx" aria-hidden="true">
           <div class="gfx-wave">
             <i style="--h:30;--i:0"></i><i style="--h:52;--i:1"></i><i style="--h:74;--i:2"></i><i style="--h:46;--i:3"></i><i style="--h:88;--i:4"></i><i style="--h:60;--i:5"></i><i style="--h:34;--i:6"></i><i style="--h:70;--i:7"></i><i style="--h:48;--i:8"></i><i style="--h:26;--i:9"></i>
           </div>
         </div>
-      </a>
+      </div>
 
     </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills wrap" id="skills">
+    <div class="reveal">
+      <span class="eyebrow" style="--tint: var(--c-stailist)">Skills</span>
+      <h2 class="section-title">Everything in my toolbox.</h2>
+      <p class="section-sub">The technologies behind the products above, plus what four years of an AI degree at UPC put in my hands. Nothing aspirational — if it's here, I've shipped with it or passed a course on it.</p>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="sk-card reveal" style="--th: var(--brand)">
+        <h3><span class="ico" aria-hidden="true">⌨️</span>Languages</h3>
+        <p class="sk-sub">Python and Dart are the two I think in; the rest I reach for when the problem asks.</p>
+        <div class="chips">
+          <span class="chip core">Python</span><span class="chip core">Dart</span><span class="chip">JavaScript / TypeScript</span><span class="chip">SQL</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">R</span><span class="chip">MATLAB</span><span class="chip">HTML / CSS</span>
+        </div>
+      </div>
+
+      <div class="sk-card reveal" style="--th: var(--c-shalion)">
+        <h3><span class="ico" aria-hidden="true">📈</span>Machine learning &amp; modeling</h3>
+        <p class="sk-sub">From interpretable classical models in production to deep nets on a national supercomputer.</p>
+        <div class="chips">
+          <span class="chip core">PyTorch</span><span class="chip core">scikit-learn</span><span class="chip core">XGBoost</span><span class="chip core">SHAP</span><span class="chip">TensorFlow / Keras</span><span class="chip">Random Forest</span><span class="chip">GLMs / logit models</span><span class="chip">PCA · K-means</span><span class="chip">CRFs</span><span class="chip">Kalman filters</span><span class="chip">Normalizing flows</span><span class="chip">OpenCV</span><span class="chip">YOLOv8</span><span class="chip">PyTorch DDP</span><span class="chip">MareNostrum 5 · SLURM</span>
+        </div>
+      </div>
+
+      <div class="sk-card reveal" style="--th: var(--c-stailist)">
+        <h3><span class="ico" aria-hidden="true">✨</span>LLMs, agents &amp; GenAI</h3>
+        <p class="sk-sub">Where most of the last two years went — agent pipelines that have to survive real users.</p>
+        <div class="chips">
+          <span class="chip core">Gemini / Vertex AI</span><span class="chip core">LangChain</span><span class="chip core">Agent pipelines</span><span class="chip core">Prompt engineering</span><span class="chip">OpenAI API</span><span class="chip">RAG · GraphRAG</span><span class="chip">BM25 · HNSW</span><span class="chip">Speech-to-text</span><span class="chip">fal.ai (FLUX)</span><span class="chip">ffmpeg</span><span class="chip">NLTK · n-grams</span>
+        </div>
+      </div>
+
+      <div class="sk-card reveal" style="--th: var(--c-muvyt)">
+        <h3><span class="ico" aria-hidden="true">⚙️</span>Backend, data &amp; cloud</h3>
+        <p class="sk-sub">What turns a model into something with a URL, a bill and an uptime number.</p>
+        <div class="chips">
+          <span class="chip core">FastAPI</span><span class="chip core">Celery + Redis</span><span class="chip core">Supabase / PostgreSQL</span><span class="chip core">Docker</span><span class="chip">Pydantic</span><span class="chip">Flask</span><span class="chip">Stripe</span><span class="chip">Snowflake</span><span class="chip">dbt</span><span class="chip">Spark</span><span class="chip">pandas</span><span class="chip">AWS Fargate · S3</span><span class="chip">Render</span><span class="chip">Firebase Hosting</span><span class="chip">CI/CD</span><span class="chip">Sentry</span><span class="chip">Locust</span><span class="chip">Playwright</span>
+        </div>
+      </div>
+
+      <div class="sk-card reveal" style="--th: var(--c-camellos)">
+        <h3><span class="ico" aria-hidden="true">📱</span>Frontend, mobile &amp; product</h3>
+        <p class="sk-sub">I ship the surface too — App Store review included.</p>
+        <div class="chips">
+          <span class="chip core">Flutter</span><span class="chip core">React 19 + Vite</span><span class="chip">Streamlit</span><span class="chip">Responsive CSS</span><span class="chip">Xcode Cloud</span><span class="chip">App Store Connect</span><span class="chip">AdMob</span><span class="chip">UX &amp; product design</span>
+        </div>
+      </div>
+
+      <div class="sk-card reveal" style="--th: var(--c-voice)">
+        <h3><span class="ico" aria-hidden="true">🛰️</span>Optimization, planning &amp; robotics</h3>
+        <p class="sk-sub">The classic-AI half of the degree. Still the right tool more often than people expect.</p>
+        <div class="chips">
+          <span class="chip">Reinforcement learning</span><span class="chip">Gymnasium · DDPG / TD3</span><span class="chip">PDDL planning</span><span class="chip">CLIPS · rule-based systems</span><span class="chip">Case-based reasoning</span><span class="chip">Local search · simulated annealing</span><span class="chip">Pathfinding &amp; routing</span><span class="chip">Discrete-event simulation · FlexSim</span><span class="chip">ROS · LiDAR</span><span class="chip">OpenMP · SIMD</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="skills-note reveal">
+      <span class="dotkey"><i></i> Tinted = what I use most weeks.</span>
+      <span>The full four-year syllabus, subject by subject, is on the <a class="inline-link" href="university.html">University page</a>.</span>
+    </p>
   </section>
 
   <!-- ============ EXPERIENCE ============ -->
@@ -179,29 +288,45 @@
     <div class="exp-grid">
 
       <div class="exp-card reveal" style="--tint: var(--c-shalion); --tint-ink: #1558b0">
-        <img class="brand-logo" src="assets/img/logos/shalion.svg" alt="Shalion" width="1615" height="345" loading="lazy">
+        <a href="https://www.shalion.com" target="_blank" rel="noopener" aria-label="Shalion — company website">
+          <img class="brand-logo" src="assets/img/logos/shalion.svg" alt="Shalion" width="1615" height="345" loading="lazy">
+        </a>
         <span class="role">AI &amp; Data Engineer · 2025–2026</span>
         <h3>E-commerce analytics for global brands</h3>
         <p>Handed an embryonic product and one question: <b>can we estimate any brand's sales on any retailer, without the retailer telling us?</b> I led the Market Share Engine from data pipelines on Snowflake to models to serverless AWS deployment — now running <b>weekly in production</b>, feeding the dashboards Shalion's clients pay for.</p>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">XGBoost</span><span class="chip">Snowflake</span><span class="chip">dbt</span><span class="chip">AWS Fargate · S3</span><span class="chip">Docker</span><span class="chip">Streamlit</span><span class="chip">CI/CD</span>
+        </div>
         <div class="exp-stats">
           <div><b>3.8%</b><span>aggregate error vs. actuals</span></div>
           <div><b>50+</b><span>retailers covered</span></div>
           <div><b>~2%</b><span>of products have ground truth</span></div>
         </div>
-        <a class="open" href="projects/market-share.html">Read the case study <span class="arr">→</span></a>
+        <div class="exp-foot">
+          <a class="open" href="projects/market-share.html">Read the case study <span class="arr">→</span></a>
+          <a class="linkpill" href="https://www.shalion.com" target="_blank" rel="noopener">shalion.com <span class="ic">↗</span></a>
+        </div>
       </div>
 
       <div class="exp-card reveal" style="--tint: var(--c-muvyt); --tint-ink: #3a48c9">
-        <img class="brand-logo square" src="assets/img/muvyt/logo.png" alt="Muvyt" width="212" height="223" loading="lazy">
+        <a href="https://muvyt.ai" target="_blank" rel="noopener" aria-label="Muvyt — product website">
+          <img class="brand-logo square" src="assets/img/muvyt/logo.png" alt="Muvyt" width="212" height="223" loading="lazy">
+        </a>
         <span class="role">Co-founder · 2026–now</span>
         <h3>Muvyt — my own startup</h3>
         <p>Being a founder means the model is the easy part. With Guifre I've <b>priced plans from upstream token costs</b>, written the SLOs, load-tested to 1,000 concurrent users, hardened Stripe billing with database-level guarantees — and answered the support email.</p>
+        <div class="chips">
+          <span class="chip">FastAPI</span><span class="chip">Celery + Redis</span><span class="chip">Vertex AI Gemini</span><span class="chip">fal.ai</span><span class="chip">ffmpeg</span><span class="chip">Supabase</span><span class="chip">Stripe</span><span class="chip">React 19</span><span class="chip">Sentry</span><span class="chip">Locust</span>
+        </div>
         <div class="exp-stats">
           <div><b>50</b><span>paid beta seats</span></div>
           <div><b>600+</b><span>team commits in 4 months</span></div>
           <div><b>250K+</b><span>subs on flagship customer channel</span></div>
         </div>
-        <a class="open" href="projects/muvyt.html">Read the case study <span class="arr">→</span></a>
+        <div class="exp-foot">
+          <a class="open" href="projects/muvyt.html">Read the case study <span class="arr">→</span></a>
+          <a class="linkpill" href="https://muvyt.ai" target="_blank" rel="noopener">muvyt.ai <span class="ic">↗</span></a>
+        </div>
       </div>
 
     </div>
@@ -215,11 +340,11 @@
         <p class="big">BSc in AI at UPC Barcelona, exchange at <span class="tint">UC Chile</span>, deep learning on a national supercomputer — and still, everything I really know came from <span class="tint">putting things in front of real users</span> and watching what breaks.</p>
         <div class="about-facts">
           <span class="chip">📍 Barcelona</span>
-          <span class="chip">🎓 BSc in Artificial Intelligence, UPC '26</span>
-          <span class="chip">🌎 Exchange — UC Chile</span>
+          <a class="chip" href="university.html">🎓 BSc in Artificial Intelligence, UPC '26 →</a>
+          <a class="chip" href="https://www.uc.cl/" target="_blank" rel="noopener">🌎 Exchange — UC Chile ↗</a>
           <span class="chip">🗣️ Catalan · Spanish · English</span>
-          <span class="chip">🐍 Python · PyTorch · FastAPI</span>
-          <span class="chip">⚛️ React · Supabase · AWS</span>
+          <a class="chip" href="#skills">🧰 Full skills &amp; stack →</a>
+          <a class="chip" href="https://github.com/Llucfurriols" target="_blank" rel="noopener">💻 GitHub ↗</a>
           <span class="chip">♟️ Chess instructor</span>
         </div>
       </div>
@@ -236,7 +361,8 @@
       <p>I'm always up for interesting problems — AI products, ML systems, or a wild idea that needs shipping.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="mailto:llucfurriols@gmail.com">Email me <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="https://github.com/Llucfurriols" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/lluc-furriols-llimargas-707125308" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn btn-ghost" href="https://github.com/Llucfurriols" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </div>
     <div class="foot-meta">
@@ -245,6 +371,8 @@
         <li><a href="https://github.com/Llucfurriols" target="_blank" rel="noopener">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/lluc-furriols-llimargas-707125308" target="_blank" rel="noopener">LinkedIn</a></li>
         <li><a href="https://devpost.com/Llucfurriols" target="_blank" rel="noopener">Devpost</a></li>
+        <li><a href="university.html">University</a></li>
+        <li><a href="#skills">Skills</a></li>
       </ul>
       <p class="colophon">Hand-coded — HTML, CSS and one small JS file. © <span data-year>2026</span> Lluc Furriols Llimargas</p>
     </div>

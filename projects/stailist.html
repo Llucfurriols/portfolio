@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css?v=5">
+  <link rel="stylesheet" href="../assets/css/style.css?v=6">
 </head>
 <body style="--tint: var(--c-stailist); --tint-ink: #6d3fd1">
 
@@ -19,7 +19,8 @@
     <nav>
       <ul class="nav-links">
         <li><a href="../index.html#products">Products</a></li>
-        <li><a href="../university.html">University</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li class="hide-sm"><a href="../university.html">University</a></li>
         <li class="hide-sm"><a href="../index.html#experience">Experience</a></li>
         <li><a class="cta" href="mailto:llucfurriols@gmail.com">Say hi</a></li>
       </ul>
@@ -42,9 +43,12 @@
             <span class="chip">Open source · MPL-2.0</span>
           </div>
           <div class="pp-ctas reveal">
-            <a class="btn btn-primary" href="https://stailist.firebaseapp.com" target="_blank" rel="noopener">Try the demo <span class="arr">↗</span></a>
+            <a class="btn btn-primary" href="#demo">▶ Watch the demo <span class="arr">↓</span></a>
+            <a class="btn btn-ghost" href="https://stailist.firebaseapp.com" target="_blank" rel="noopener">Try it yourself ↗</a>
+            <a class="btn btn-ghost" href="https://devpost.com/software/stailist" target="_blank" rel="noopener">Devpost ↗</a>
             <a class="btn btn-ghost" href="https://github.com/datzii/StAIlist" target="_blank" rel="noopener">GitHub ↗</a>
           </div>
+          <p class="pp-fineprint reveal">The hosted demo runs on free-tier infrastructure left over from the hackathon, so sign-up can be slow or moody. <b>The video below shows the whole flow end to end</b> — no account needed.</p>
         </div>
       </div>
     </div>
@@ -53,11 +57,28 @@
   <div class="wrap">
     <div class="pp-bento" style="padding-top: 34px">
 
+      <div class="blk span-4 reveal" id="demo">
+        <span class="blk-label">Demo — the full flow, no sign-up</span>
+        <h3>Wardrobe in, outfit on your avatar out</h3>
+        <div class="video-embed">
+          <iframe src="https://www.youtube-nocookie.com/embed/mNPfGIvHMls?start=31&amp;rel=0"
+                  title="StAIlist — demo video"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+        <div class="p-links">
+          <a href="https://www.youtube.com/watch?v=mNPfGIvHMls&amp;t=31s" target="_blank" rel="noopener">Watch on YouTube <span class="ic">↗</span></a>
+          <a href="https://devpost.com/software/stailist" target="_blank" rel="noopener">Devpost project page <span class="ic">↗</span></a>
+          <a href="https://stailist.firebaseapp.com" target="_blank" rel="noopener">Live demo <span class="ic">↗</span></a>
+        </div>
+      </div>
+
       <div class="blk span-2 reveal" style="padding: 0; overflow: hidden; background: linear-gradient(180deg, #241832, #171123)">
         <img src="../assets/img/stailist/demo_welcome.png" alt="StAIlist welcome — your personal AI stylist" width="430" height="860" decoding="async" style="width: 78%; margin: 24px auto 0; border-radius: 22px 22px 0 0; box-shadow: var(--shadow-2)">
       </div>
 
-      <div class="blk span-4 reveal">
+      <div class="blk span-6 reveal">
         <span class="blk-label">The problem</span>
         <h3>No styling app knows what's in your closet</h3>
         <p>Everyone owns more clothes than they wear. The obstacles are vision problems: garment photos are messy (hangers, backgrounds, folds), outfit choice depends on weather and occasion, and nobody trusts a recommendation they can't <b>see on themselves</b>. Plus the sustainability angle: resurfacing the clothes you forgot beats buying new ones.</p>
@@ -119,6 +140,8 @@
         <li><a href="https://github.com/Llucfurriols" target="_blank" rel="noopener">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/lluc-furriols-llimargas-707125308" target="_blank" rel="noopener">LinkedIn</a></li>
         <li><a href="https://devpost.com/Llucfurriols" target="_blank" rel="noopener">Devpost</a></li>
+        <li><a href="../university.html">University</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
       </ul>
       <p class="colophon">Hand-coded — HTML, CSS and one small JS file. © <span data-year>2026</span> Lluc Furriols Llimargas</p>
     </div>
